@@ -1,0 +1,353 @@
+:root {
+    --white-color: #FFFAFA;
+    --black-color: #292D32;
+    --lightblack-color: #757575;
+    --lighterblack-color: #e4e4e4;
+    --page-color: #EDEDED;
+    --mediumblack-color: #dcdcdc;
+    
+    --gradient-primary: linear-gradient(45deg, #110DD5, #108AEE);
+    --primary-color: #110DD5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--page-color);
+
+}
+
+.page-container{
+    display: flex;
+    flex-direction: row;
+    
+    height: 100vh;
+}
+
+.sidebar{
+    
+    width: 260px;
+    max-width: 260px;
+    min-width: 260px;
+    flex-basis: 260px;
+    position: fixed;
+    height: 100vh;
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px ;
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 5px var(--lighterblack-color);
+
+    
+}
+
+.profile-section{
+   
+    padding: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid var(--lighterblack-color);
+}
+
+.profile-pic{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.menu-btn{
+    position: absolute;
+    left: 242px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--lighterblack-color);
+    background-color: var(--white-color);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.menu-btn:hover{
+    background: var(--gradient-primary);
+    color: var(--white-color);
+    cursor: pointer;
+    border: 1px;
+}
+
+.profile-pic img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+}
+.profile-details{
+    flex: 1;
+    margin-left: 8px;
+}
+
+.profile-details #profile-name{
+   font-size: 14px;
+   font-weight: 500;
+   margin-bottom: 0px;
+}
+
+.profile-details #profile-company{
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--lightblack-color);
+    text-transform: uppercase;
+}
+
+
+
+
+/*DASHBOARD SECTION*/
+
+.dashboard-section{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.dashboard-cell{
+    padding: 14px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+
+}
+
+.dashboard-section a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+
+.dashboard-cell:hover {
+    background: var(--gradient-primary);
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: larger;
+}
+
+.dashboard-cell.active{
+    background: var(--gradient-primary);
+    color: var(--white-color);
+}
+
+.form.active{
+    background: var(--gradient-primary);
+}
+
+.dashboard-section .dashboard-cell > *{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.dashboard-cell .caret{
+    font-size: smaller;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-section .text{
+    font-size: 14px;
+    margin-left: 12px;
+    flex: 1;
+}
+
+
+
+.dashboard-submenu{
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+    
+    gap: 14px;
+    margin-left: 20px;
+    border-left: 2px solid var(--lighterblack-color);
+}
+
+.dashboard-submenu .submenu-cell > *{
+    padding: 14px;
+    border-radius: 14px;
+    
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+
+    max-height: 40px;
+}
+
+.submenu-cell .submenu-text{
+    font-size: 12px;
+    margin-left: 12px;
+    flex: 1;
+}
+
+
+.submenu-cell:hover > * {
+    background: var(--gradient-primary);
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: larger;
+}
+
+
+
+.form-1.active{
+    background: var(--gradient-primary);
+    color: var(--white-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*SETTINGS SECTION*/
+
+.settings-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding-top: 8px;
+    border-top: 1px solid var(--lighterblack-color);
+}
+
+.settings-section .dashboard-cell > *{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.settings-section .text{
+    font-size: 14px;
+    margin-left: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------- MAIN SECTION --------------*/
+
+.main-page{
+    position: relative;
+    flex: 1;
+    margin-left: 260px;
+    padding: 40px 80px ;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.evaluate-button{
+    width: 180px;
+    height: 60px;
+
+    border: 1px solid gainsboro;
+    background: var(--gradient-primary);
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.evaluate-button p{
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.evaluate-button:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.evaluate-button:active p{
+    opacity: 0.6;
+}
+
+
+
+.form-details-section {
+    position: absolute;
+    bottom: 90px; /* Adjust this value to place the section at the desired position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.form-title{
+
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+.form-desc{
+    font-size: 12px;
+    font-weight: 400;
+    
+}

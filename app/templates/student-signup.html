@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvalRate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/student-signup.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="{{ url_for('static', filename='images/EvalRate-Logo.png') }}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+
+
+<body>
+    
+    <div class="page-container">
+
+        <!-- ------------------------ PHOTO COLUMN ------------------------ -->
+
+        <div class="page-photo">
+
+
+            <div class="photo-container">
+                <a href="{{ url_for('web.home_page') }}">
+                <div class="website-title">
+                    <div class="logo">
+
+                    </div>
+                    <div class="title">
+                        EVALRATE
+                    </div>
+                    <div class="subtitle">
+                        POLYTECHNIC UNIVERSITY OF THE PHILIPPINES - OJT EVALUATION PORTAL
+                    </div>
+                </div>
+                </a>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ------------------------ SIGNUP COLUMN ------------------------ -->
+
+        <div class="page-details">
+
+            <div class="container">
+
+                <div class="header">
+
+                    <h2>
+                        Sign-Up
+                    </h2>
+                </div>
+
+                <div class="progress-header">
+
+
+                    <div class="progress-circle">
+                        <div class="circle p1 active">
+                            <i class="ph ph-user-gear"></i>
+                        </div>
+
+
+                        <div class="divider"></div>
+
+
+                        <div class="circle p2">
+                            <i class="ph ph-user-check"></i>
+                        </div>
+
+
+
+                        <div class="divider"></div>
+
+                        <div class="circle p3">
+                            <i class="ph ph-briefcase"></i>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="progress-text">
+
+                        <div class="circle-text">
+                            Account Details
+                        </div>
+
+                        <div class="circle-text">
+                            Personal Details
+                        </div>
+
+                        <div class="circle-text">
+                            Internship Details
+                        </div>                       
+                    </div>
+
+
+
+
+                </div>
+
+                <!-- ------------------------ SIGNUP COLUMN ------------------------ -->
+
+                <div class="forms">
+                    <form class="form-main" action="" method="POST">
+                        <div class="stage p1 active">
+                            <div class="input-cell">
+                                <label for="email" class="label-text">Email</label>
+                                <input type="text" id="email" class="input-field" placeholder="you@email.com" name="email" required>
+                            </div>
+                            <div class="input-cell">
+                                <label for="password" class="label-text">Password</label>
+                                <input type="password" id="password" class="input-field" placeholder="********" name="password" required>
+                            </div>
+                            <div class="input-cell">
+                                <label for="confirm-password" class="label-text">Confirm Password</label>
+                                <input type="password" id="confirm-password" class="input-field" placeholder="********" required>
+                            </div>
+                            <div class="bottom-panel">
+                                <input type="button" class="button" id="stage1Next" value="Next">
+                                <a href="{{ url_for('student.student_login') }}">Already have an Account?</a>
+                            </div>
+                        </div>
+
+
+
+                        <div class="stage p2">
+                            <div class="input-cell">
+                                <label for="firstname" class="label-text">First Name</label>
+                                <input type="text" id="firstname" class="input-field" placeholder="Juan" name="firstname" required>
+                            </div>
+                            <div class="input-cell">
+                                <label for="middlename" class="label-text">Middle Name</label>
+                                <input type="text" id="middlename" class="input-field" placeholder="Reyes" name="middlename">
+                            </div>
+                            <div class="input-cell">
+                                <label for="surname" class="label-text">Surname</label>
+                                <input type="text" id="surname" class="input-field" placeholder="Dela Cruz" name="surname" required>
+                            </div>
+
+                            <div class="input-cell">
+                                <label for="studentid" class="label-text">PUP Student ID</label>
+                                <input type="text" id="studentid" class="input-field" placeholder="20XX-00000-MN-0" name="studentid" required pattern="\d{4}-\d{5}-[M-N]{2}-\d">
+                            </div>
+
+
+                            <div class="input-cell">
+                                <label for="contact" class="label-text">Contact Number</label>
+                                <input type="text" id="contact" class="input-field" placeholder="09XXXXXXXXX" name="contact" required pattern="09\d{9}">
+                            </div>
+                            <div class="bottom-panel">
+                                <div class="navigation">
+                                    <input type="button" class="button previous" id="stage2Previous" value="Previous">
+                                    <input type="button" class="button next" id="stage2Next" value="Next">
+                                </div>
+                                <a href="{{ url_for('student.student_login') }}">Already have an Account?</a>
+                            </div>
+                        </div>
+
+
+
+                        <div class="stage p3">
+
+                            <div class="input-cell">
+                                <label for="department" class="label-text">College Department</label>
+                                    <div class="select-container">
+                                        <select id="department" class="input-field" name="department" required>
+                                        </select>
+                                        <i class="ph ph-caret-down"></i>
+                                    </div>
+                            </div>
+
+
+                            <div class="input-cell">
+                                <label for="course" class="label-text">Course Program</label>
+                                    <div class="select-container">
+                                        <select id="course" class="input-field" name="course" required>
+                                        </select>
+                                        <i class="ph ph-caret-down" id="dept-dropdown"></i>
+                                    </div>
+                                
+                            </div>
+
+
+                            <div class="input-cell">
+                                <label for="section" class="label-text">Section Code</label>
+                                    <div class="select-container">
+                                        <select id="section" class="input-field" name="section" required>
+                                        </select>
+                                        <i class="ph ph-caret-down"></i>
+                                    </div>
+                                
+                            </div>
+
+                            <div class="input-cell">
+                                <label for="academic-year" class="label-text">Academic Year</label>
+                                    <div class="select-container">
+                                        <select id="academic-year" class="input-field" name="academic-year" required>
+                                            <option value="2022-2023">2022-2023</option>
+                                            <option value="2023-2024">2023-2024</option>
+                                            <option value="2024-2025">2024-2025</option>
+                                            <option value="2026-2027">2026-2027</option>
+                                            <option value="2028-2029">2028-2029</option>
+                                            <option value="2029-2030">2029-2030</option>
+                                        </select>
+                                        <i class="ph ph-caret-down"></i>
+                                    </div>
+                                
+                            </div>
+
+
+
+
+                            <div class="input-cell">
+                                <label for="supervisor" class="label-text">Supervisor</label>
+                                    <div class="select-container">
+                                        <select id="supervisor" class="input-field" name="supervisor" required>
+                                            {% for supervisor in supervisors %}
+                                                <<option value="{{ supervisor[0] }}">{{ supervisor[1] }}, {{ supervisor[0] }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <i class="ph ph-caret-down"></i>
+                                    </div>
+
+                            <div class="bottom-panel">
+                                <div class="navigation">
+                                    <input type="button" class="button previous" id="stage3Previous" value="Previous">
+                                    <input type="submit" class="button submit" value="Submit">
+                                </div>
+                                <a href="{{ url_for('student.student_login') }}">Already have an Account?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+
+
+
+            </div>
+            
+        </div>
+
+        
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/student-signup.js') }}"></script>
+
+</body>
+
+
+</html>

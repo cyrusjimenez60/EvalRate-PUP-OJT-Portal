@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvalRate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="{{ url_for('static', filename='images/EvalRate-Logo.png') }}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+
+
+<body>
+    
+    <div class="page-container">
+
+
+        <div class="page-details">
+
+            <div class="website-title">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/EvalRate-Logo.png') }}" alt="logo"></i>
+                </div>
+
+                <div class="website-title-details">
+                    <div class="title">
+                        EVALRATE
+                    </div>
+                    <div class="subtitle">
+                        POLYTECHNIC UNIVERSITY OF THE PHILIPPINES - OJT EVALUATION PORTAL
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+            <div class="button-links">
+                <a href="{{ url_for('student.student_login') }}">
+                    <button>
+                        STUDENT
+                    </button>
+                </a>
+
+                <a href="#">
+                    <button>
+                        SUPERVISOR
+                    </button>
+                </a>
+
+                <a href="{{ url_for('adviser.adviser_dashboard') }}">
+                    <button>
+                        FACULTY
+                    </button>
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+
+</html>
