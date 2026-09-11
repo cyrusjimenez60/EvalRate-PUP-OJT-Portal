@@ -10,7 +10,12 @@ A basic front-end (HTML/CSS) was also developed as a supporting interface, conne
 
 ## Purpose
 
-This project is **not intended to be a fully finished system**. Its primary goal is to demonstrate solid database design principles — including normalization, relationships, and schema structure — with the front-end connection serving only as a proof-of-concept to confirm that the database works correctly when interfaced with an external application.
+This project is **not intended to be a fully finished system**. Its primary goal is to demonstrate solid database design principles, including normalization, relationships, and schema structure — with the front-end connection serving only as a proof-of-concept to confirm that the database works correctly when interfaced with an external application.
+
+## Entity-Relationship Diagram (ERD)
+
+Click the link below to view the ERD of the database schema:
+[ERD - Internship Evaluation System](database/ERD%20-%20Internship%20Evaluation%20System.png)
 
 ## Key Components
 
